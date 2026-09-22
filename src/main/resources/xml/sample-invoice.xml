@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Document>
+    <ContactDetail>
+        <Title>Mr</Title>
+        <Name>John</Name>
+        <Surname>Doe</Surname>
+        <Gender>Male</Gender>
+        <ContactNumber>0824542602</ContactNumber>
+        <Email>johndoe@gmail.com</Email>
+        <Language>English</Language>
+    </ContactDetail>
+    <AddressDetails>
+        <Street>384 Church St</Street>
+        <City>Pretoria</City>
+        <Province>Gauteng</Province>
+        <Country>South Africa</Country>
+        <PostalCode>0127</PostalCode>
+    </AddressDetails>
+    <FormatDetails>
+        <DefaultDeliveryMethod>EMAIL</DefaultDeliveryMethod>
+        <AccountSubType>Retail Consumer</AccountSubType>
+    </FormatDetails>
+    <CustomerDetails>
+        <CustomerName>John Doe</CustomerName>
+        <PrimaryAccountNumber>NQ329865963</PrimaryAccountNumber>
+        <PrefferedCurrency>ZAR</PrefferedCurrency>
+        <PaymentMethod>Debit Order</PaymentMethod>
+        <ActiveDate>2026-01-01</ActiveDate>
+        <Status>Active</Status>
+    </CustomerDetails>
+    <Invoice>
+        <InvoiceInfo>
+            <ReferenceNumber>INV100001</ReferenceNumber>
+            <IssueDate>2026-09-22</IssueDate>
+            <PeriodFrom>2026-08-1</PeriodFrom>
+            <PeriodTo>2026-08-31</PeriodTo>
+            <AccountNumber>NQ329865963</AccountNumber>
+            <InvoiceAmountPreTax>869.57</InvoiceAmountPreTax>
+            <InvoiceAmountTax>130.43</InvoiceAmountTax>
+            <InvoiceAmountTotal>1000.00</InvoiceAmountTotal>
+            <AccountAmountDue>1000.00</AccountAmountDue>
+            <PaymentDueDate>2026-10-10</PaymentDueDate>
+            <TaxRate>15</TaxRate>
+        </InvoiceInfo>
+        <InvoiceSummaryList>
+            <InvoiceSummaryDetail>
+                <InvoiceText>Monthly Subscription</InvoiceText>
+                <Amount>600.00</Amount>
+            </InvoiceSummaryDetail>
+            <InvoiceSummaryDetail>
+                <InvoiceText>Voice Calls</InvoiceText>
+                <Amount>150.00</Amount>
+            </InvoiceSummaryDetail>
+            <InvoiceSummaryDetail>
+                <InvoiceText>Data usage</InvoiceText>
+                <Amount>119.57</Amount>
+            </InvoiceSummaryDetail>
+            <InvoiceSummaryDetail>
+                <InvoiceText>VAT</InvoiceText>
+                <Amount>130.43</Amount>
+            </InvoiceSummaryDetail>
+        </InvoiceSummaryList>
+
+        <CustomerNodeList>
+            <HierarchyLevel>1</HierarchyLevel>
+            <Name>John Doe</Name>
+            <AccountNumber>NQ329865963</AccountNumber>
+            <ProductList>
+                <Product>
+                    <ProductInstanceId>PROD10001</ProductInstanceId>
+                    <Status>Active</Status>
+                    <InvoiceText>Mobile Contract</InvoiceText>
+                    <Service>
+                        <Name>0824542602</Name>
+                        <Type>Mobile</Type>
+                        <Status>Active</Status>
+                        <ChargeSectionList>
+                            <ChargeSection>
+                                <Category>Voice</Category>
+                                <Description>Local Voice Calls</Description>
+                                <Amount>150.00</Amount>
+                            </ChargeSection>
+                            <ChargeSection>
+                                <Category>Data</Category>
+                                <Description>Mobile Data Usage</Description>
+                                <Amount>119.57</Amount>
+                            </ChargeSection>
+                        </ChargeSectionList>
+                    </Service>
+                </Product>
+            </ProductList>
+        </CustomerNodeList>
+    </Invoice>
+</Document>
