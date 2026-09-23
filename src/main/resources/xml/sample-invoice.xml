@@ -2,11 +2,11 @@
 <Document>
     <ContactDetail>
         <Title>Mr</Title>
-        <Name>John</Name>
-        <Surname>Doe</Surname>
+        <Name>Fumanekile</Name>
+        <Surname>Ndlovu</Surname>
         <Gender>Male</Gender>
         <ContactNumber>0824542602</ContactNumber>
-        <Email>johndoe@gmail.com</Email>
+        <Email>Fumanekiledlovu@gmail.com</Email>
         <Language>English</Language>
     </ContactDetail>
     <AddressDetails>
@@ -21,18 +21,18 @@
         <AccountSubType>Retail Consumer</AccountSubType>
     </FormatDetails>
     <CustomerDetails>
-        <CustomerName>John Doe</CustomerName>
+        <CustomerName>Fumanekile Ndlovu</CustomerName>
         <PrimaryAccountNumber>NQ329865963</PrimaryAccountNumber>
-        <PrefferedCurrency>ZAR</PrefferedCurrency>
+        <PreferredCurrency>ZAR</PreferredCurrency>
         <PaymentMethod>Debit Order</PaymentMethod>
-        <ActiveDate>2026-01-01</ActiveDate>
-        <Status>Active</Status>
+        <AccountOpened>2026-01-01</AccountOpened>
+        <AccountStatus>Active</AccountStatus>
     </CustomerDetails>
     <Invoice>
         <InvoiceInfo>
             <ReferenceNumber>INV100001</ReferenceNumber>
             <IssueDate>2026-09-22</IssueDate>
-            <PeriodFrom>2026-08-1</PeriodFrom>
+            <PeriodFrom>2026-08-01</PeriodFrom>
             <PeriodTo>2026-08-31</PeriodTo>
             <AccountNumber>NQ329865963</AccountNumber>
             <InvoiceAmountPreTax>869.57</InvoiceAmountPreTax>
@@ -60,35 +60,36 @@
                 <Amount>130.43</Amount>
             </InvoiceSummaryDetail>
         </InvoiceSummaryList>
-
         <CustomerNodeList>
-            <HierarchyLevel>1</HierarchyLevel>
-            <Name>John Doe</Name>
-            <AccountNumber>NQ329865963</AccountNumber>
-            <ProductList>
-                <Product>
-                    <ProductInstanceId>PROD10001</ProductInstanceId>
-                    <Status>Active</Status>
-                    <InvoiceText>Mobile Contract</InvoiceText>
-                    <Service>
-                        <Name>0824542602</Name>
-                        <Type>Mobile</Type>
+            <CustomerNode>
+                <HierarchyLevel>1</HierarchyLevel>
+                <Name>Fumanekile Ndlovu</Name>
+                <AccountNumber>NQ329865963</AccountNumber>
+                <ProductList>
+                    <Product>
+                        <ProductInstanceId>PROD10001</ProductInstanceId>
                         <Status>Active</Status>
-                        <ChargeSectionList>
-                            <ChargeSection>
-                                <Category>Voice</Category>
-                                <Description>Local Voice Calls</Description>
-                                <Amount>150.00</Amount>
-                            </ChargeSection>
-                            <ChargeSection>
-                                <Category>Data</Category>
-                                <Description>Mobile Data Usage</Description>
-                                <Amount>119.57</Amount>
-                            </ChargeSection>
-                        </ChargeSectionList>
-                    </Service>
-                </Product>
-            </ProductList>
+                        <InvoiceText>Mobile Contract</InvoiceText>
+                        <Service>
+                            <Name>0824542602</Name>
+                            <Type>Mobile</Type>
+                            <Status>Active</Status>
+                            <ChargeSectionList>
+                                <ChargeSection>
+                                    <Category>Voice</Category>
+                                    <Description>Local Voice Calls</Description>
+                                    <Amount>150.00</Amount>
+                                </ChargeSection>
+                                <ChargeSection>
+                                    <Category>Data</Category>
+                                    <Description>Mobile Data Usage</Description>
+                                    <Amount>119.57</Amount>
+                                </ChargeSection>
+                            </ChargeSectionList>
+                        </Service>
+                    </Product>
+                </ProductList>
+            </CustomerNode>
         </CustomerNodeList>
     </Invoice>
 </Document>

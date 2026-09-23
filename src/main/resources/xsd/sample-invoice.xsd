@@ -1,0 +1,149 @@
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Document">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ContactDetail">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Title" type="xs:string"/>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="Surname" type="xs:string"/>
+                            <xs:element name="Gender" type="xs:string"/>
+                            <xs:element name="ContactNumber" type="xs:string"/>
+                            <xs:element name="Email" type="xs:string"/>
+                            <xs:element name="Language" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="AddressDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Street" type="xs:string"/>
+                            <xs:element name="City" type="xs:string"/>
+                            <xs:element name="Province" type="xs:string"/>
+                            <xs:element name="Country" type="xs:string"/>
+                            <xs:element name="PostalCode" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="FormatDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DefaultDeliveryMethod" type="xs:string"/>
+                            <xs:element name="AccountSubType" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="CustomerDetails">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CustomerName" type="xs:string"/>
+                            <xs:element name="PrimaryAccountNumber" type="xs:string"/>
+                            <xs:element name="PreferredCurrency" type="xs:string"/>
+                            <xs:element name="PaymentMethod" type="xs:string"/>
+                            <xs:element name="AccountOpened" type="xs:date"/>
+                            <xs:element name="AccountStatus" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Invoice">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="InvoiceInfo">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ReferenceNumber" type="xs:string"/>
+                                        <xs:element name="IssueDate" type="xs:date"/>
+                                        <xs:element name="PeriodFrom" type="xs:date"/>
+                                        <xs:element name="PeriodTo" type="xs:date"/>
+                                        <xs:element name="AccountNumber" type="xs:string"/>
+                                        <xs:element name="InvoiceAmountPreTax" type="xs:decimal"/>
+                                        <xs:element name="InvoiceAmountTax" type="xs:decimal"/>
+                                        <xs:element name="InvoiceAmountTotal" type="xs:decimal"/>
+                                        <xs:element name="AccountAmountDue" type="xs:decimal"/>
+                                        <xs:element name="PaymentDueDate" type="xs:date"/>
+                                        <xs:element name="TaxRate" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="InvoiceSummaryList">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="InvoiceSummaryDetail" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="InvoiceText" type="xs:string"/>
+                                                    <xs:element name="Amount" type="xs:decimal"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CustomerNodeList">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="CustomerNode" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="HierarchyLevel" type="xs:integer"/>
+                                                    <xs:element name="Name" type="xs:string"/>
+                                                    <xs:element name="AccountNumber" type="xs:string"/>
+                                                    <xs:element name="ProductList">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Product" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="ProductInstanceId" type="xs:string"/>
+                                                                            <xs:element name="Status" type="xs:string" />
+                                                                            <xs:element name="InvoiceText" type="xs:string"/>
+
+                                                                            <xs:element name="Service" minOccurs="0" maxOccurs="unbounded">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="Name" type="xs:string"/>
+                                                                                        <xs:element name="Type" type="xs:string"/>
+                                                                                        <xs:element name="Status" type="xs:string"/>
+
+                                                                                        <xs:element name="ChargeSectionList">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element name="ChargeSection" minOccurs="0" maxOccurs="unbounded">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:sequence>
+                                                                                                                <xs:element name="Category" type="xs:string"/>
+                                                                                                                <xs:element name="Description" type="xs:string"/>
+                                                                                                                <xs:element name="Amount" type="xs:decimal"/>
+                                                                                                            </xs:sequence>
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
